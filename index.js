@@ -23,7 +23,7 @@ class Driver {
     return store.passengers.filter(
       function (passenger) {
         return this.trips().includes(passenger.id);
-      }
+      }.bind(this)
     );
   }
 
