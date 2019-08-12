@@ -24,7 +24,7 @@ class Driver {
       function (passenger) {
         return this.trips().forEach(
           function (trip) {
-            trip.passengerId === (passenger.id);
+            trip.passengerId === passenger.id;
           }
         );
       }.bind(this)
