@@ -20,14 +20,14 @@ class Driver {
   }
 
   passengers() {
-    const tripsDriven = this.trips().reduce(
+    const passengerIdsFromTrips = this.trips().reduce(
       function (agg, trip) {
         return [...agg, trip.passengerId];
       }
     ,[]);
     return store.passengers.filter(
       function (passenger) {
-        return tripsDriven.includes(passenger.id);
+        return passengerIdsFromTrips.includes(passenger.id);
       }
     );
   }
@@ -49,10 +49,7 @@ class Passenger {
   }
 
   drivers () {
-    return this.trips().reduce(
-      function (agg, trip) {
-        return agg.push(trip.driverId);
-      }, []);
+    const tripsTaken = this.trips().
   }
 
 }
