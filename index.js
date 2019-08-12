@@ -22,12 +22,14 @@ class Driver {
   passengers() {
     return store.passengers.filter(
       function (passenger) {
-        debugger;
-        return this.trips().includes(passenger.id);
-      }.bind(this)
+        return this.trips().forEach(
+          function (trip) {
+            trip.passengerId === (passenger.id);
+          }
+        );
+      }
     );
   }
-
 }
 
 class Passenger {
