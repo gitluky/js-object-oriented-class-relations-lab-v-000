@@ -22,6 +22,7 @@ class Driver {
   passengers() {
     return store.passengers.filter(
       function (passenger) {
+        debugger;
         return this.trips().forEach(
           function (trip) {
             trip.passengerId === passenger.id;
