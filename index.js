@@ -20,7 +20,7 @@ class Driver {
   passengers() {
     return trips.reduce(function (agg, el) {
       return agg.push(el.passengerId);
-    }, []);
+    }, 0);
   }
 
 }
