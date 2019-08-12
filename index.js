@@ -27,8 +27,8 @@ class Driver {
             trip.passengerId === (passenger.id);
           }
         );
-      }
-    ).bind(this);
+      }.bind(this);
+    );
   }
 }
 
