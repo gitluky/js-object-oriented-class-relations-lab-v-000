@@ -59,4 +59,12 @@ class Trip {
     store.trips.push(this);
   }
 
+  driver () {
+    return this.driver;
+  }
+
+  passenger () {
+    return this.passenger;
+  }
+
 }
