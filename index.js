@@ -1,8 +1,8 @@
-let driverId = 0
-let tripId = 0
-let passenderId = 0
+let driverId = 0;
+let tripId = 0;
+let passenderId = 0;
 
-const store = [ drivers: [], passengers: [], trips: [] ]
+const store = [ drivers: [], passengers: [], trips: [] ];
 
 class Driver {
   constructor (name) {
@@ -14,7 +14,7 @@ class Driver {
   trips () {
     return store.trips.filter(function (trip) {
       return trip.driverId == this.id;
-    }).bind(this);
+    }.bind(this));
   }
 
   passengers() {
