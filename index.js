@@ -20,9 +20,11 @@ class Driver {
   }
 
   passengers() {
-    return this.trips().reduce(function (agg, el) {
-      return [...agg, el];
-    }, []);
+    return store.passengers.filter(
+      function (passenger) {
+        return this.trips.includes(passenger.id);
+      }
+    );
   }
 
 }
