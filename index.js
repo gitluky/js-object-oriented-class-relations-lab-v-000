@@ -20,16 +20,16 @@ class Driver {
   }
 
   passengers() {
+    const tripsDriven = this.trips().reduce(
+      function (agg, trip) {
+        return [...agg, trip.passengerId]
+      }
+    );
     return store.passengers.filter(
       function (passenger) {
-        debugger;
-        return this.trips().forEach(
-          function (trip) {
-            trip.passengerId === passenger.id;
-          }
-        );
-      }.bind(this)
-    );
+        return tripsDriven.passengerId === passenger.id;
+      }
+    )
   }
 }
 
