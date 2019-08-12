@@ -49,7 +49,17 @@ class Passenger {
   }
 
   drivers () {
-    const tripsTaken = this.trips().
+    const driverIdsFromTrips = this.trips().reduce(
+      function (agg, trip) {
+        return [...agg, trip]
+      }
+    , []);
+    return store.drivers.filter(
+      function (driver) {
+        return driverIdsFromTrips.includes(driver.id);
+      }
+    );
+
   }
 
 }
