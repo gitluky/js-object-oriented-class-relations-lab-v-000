@@ -21,7 +21,8 @@ class Driver {
 
   passengers() {
     debugger;
-    const tripsDriven = this.trips().reduce(
+    const tripsDriven = this.trips()
+    tripsDriven.reduce(
       function (agg, trip) {
         return [...agg, trip.passengerId];
       }
