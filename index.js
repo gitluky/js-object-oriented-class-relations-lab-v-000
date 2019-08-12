@@ -20,7 +20,7 @@ class Driver {
   }
 
   passengers() {
-    debugger;
+
     const tripsDriven = this.trips()
     tripsDriven.reduce(
       function (agg, trip) {
