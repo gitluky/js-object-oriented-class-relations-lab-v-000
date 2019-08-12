@@ -10,7 +10,7 @@ class Driver {
     this.id = ++driverId;
     store.drivers.push(this);
   }
-  
+
 }
 
 class Passenger {
@@ -19,10 +19,10 @@ class Passenger {
     this.id = ++passengerId;
     store.passengers.push(this);
   }
-  
+
 }
 
 class Trip {
- 
-  
+
+
 }
