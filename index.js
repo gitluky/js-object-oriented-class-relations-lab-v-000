@@ -12,9 +12,11 @@ class Driver {
   }
 
   trips () {
-    return store.trips.filter(function (trip) {
-      return trip.driverId == this.id;
-    }.bind(this));
+    return store.trips.filter(
+      function (trip) {
+        return trip.driverId == this.id;
+      }.bind(this)
+    );
   }
 
   passengers() {
@@ -30,6 +32,21 @@ class Passenger {
     this.name = name;
     this.id = ++passengerId;
     store.passengers.push(this);
+  }
+
+  trips () {
+    return store.trips.filter(
+      function (trip) {
+        return trip.passengerId === this.id;
+      }.bind(this)
+    );
+  }
+
+  drivers () {
+    return trips.reduce(
+      function (agg, trip) {
+        return agg.push(trip.driverId);
+      }, []);
   }
 
 }
