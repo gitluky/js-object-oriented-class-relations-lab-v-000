@@ -29,7 +29,7 @@ class Driver {
     return store.passengers.filter(
       function (passenger) {
         debugger;
-        return tripsDriven.passengerId === passenger.id;
+        return tripsDriven.includes(passenger.id);
       }
     );
   }
