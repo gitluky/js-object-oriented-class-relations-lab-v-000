@@ -72,6 +72,10 @@ class Trip {
     store.trips.push(this);
   }
 
+  driver () {
+    console.log(this.driverId);
+  }
+
 
 
 }
