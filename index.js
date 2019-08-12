@@ -20,7 +20,7 @@ class Driver {
   }
 
   passengers() {
-    return trips.reduce(function (agg, el) {
+    return trips().reduce(function (agg, el) {
       return agg.push(el.passengerId);
     }, []);
   }
@@ -43,7 +43,7 @@ class Passenger {
   }
 
   drivers () {
-    return trips.reduce(
+    return trips().reduce(
       function (agg, trip) {
         return agg.push(trip.driverId);
       }, []);
