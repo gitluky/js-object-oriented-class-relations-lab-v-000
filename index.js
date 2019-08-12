@@ -73,7 +73,11 @@ class Trip {
   }
 
   driver () {
-    console.log(this.driverId);
+    return store.drivers.find(
+      function (driver) {
+        driver.id === this.driverId;
+      }.bind(this)
+    );
   }
 
 
