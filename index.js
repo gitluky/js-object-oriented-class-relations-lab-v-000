@@ -27,7 +27,7 @@ class Driver {
       function (agg, trip) {
         return [...agg, trip.passengerId];
       }
-    );
+    ,[]);
     return store.passengers.filter(
       function (passenger) {
         return tripsDriven.passengerId === passenger.id;
