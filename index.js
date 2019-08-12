@@ -80,6 +80,8 @@ class Trip {
     );
   }
 
-
+  passenger () {
+    return this.passenger;
+  }
 
 }
