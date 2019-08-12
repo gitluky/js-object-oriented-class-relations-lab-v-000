@@ -21,8 +21,9 @@ class Driver {
 
   passengers() {
     const tripsDriven = this.trips().reduce(
+      debugger;
       function (agg, trip) {
-        return [...agg, trip.passengerId]
+        return [...agg, trip.passengerId];
       }
     );
     return store.passengers.filter(
