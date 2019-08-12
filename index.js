@@ -21,7 +21,7 @@ class Driver {
 
   passengers() {
     return this.trips().reduce(function (agg, el) {
-      return agg.push(el);
+      return [...agg, el];
     }, []);
   }
 
