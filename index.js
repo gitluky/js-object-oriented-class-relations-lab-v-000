@@ -28,6 +28,7 @@ class Driver {
     ,[]);
     return store.passengers.filter(
       function (passenger) {
+        debugger;
         return tripsDriven.passengerId === passenger.id;
       }
     );
