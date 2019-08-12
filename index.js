@@ -23,6 +23,10 @@ class Passenger {
 }
 
 class Trip {
-
+  constructor (driver, passenger) {
+    this.driverId = driver.id;
+    this.passengerId = passenger.id;
+    store.trips.push(this);
+  }
 
 }
