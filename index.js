@@ -72,16 +72,6 @@ class Trip {
     store.trips.push(this);
   }
 
-  driver () {
-    return store.drivers.find(
-      function (driver) {
-        driver.id === this.driverId;
-      }.bind(this)
-    );
-  }
 
-  passenger () {
-    return this.passenger;
-  }
 
 }
