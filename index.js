@@ -28,7 +28,7 @@ class Driver {
           }
         );
       }
-    );
+    ).bind(this);
   }
 }
 
