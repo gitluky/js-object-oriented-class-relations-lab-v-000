@@ -29,7 +29,7 @@ class Driver {
       function (passenger) {
         return tripsDriven.passengerId === passenger.id;
       }
-    )
+    );
   }
 }
 
