@@ -51,7 +51,7 @@ class Passenger {
   drivers () {
     const driverIdsFromTrips = this.trips().reduce(
       function (agg, trip) {
-        return [...agg, trip]
+        return [...agg, trip.driverId]
       }
     , []);
     return store.drivers.filter(
